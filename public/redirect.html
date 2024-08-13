@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ALCOM</title>
+        <link rel="icon" type="image/svg+xml" href="/images/logo.svg">
+        <script>
+            const url = `${location.protocol}//${location.host}`;
+            const hash = location.hash.substring(1);
+            const lang = window.navigator.language || window.navigator.userLanguage || window.navigator.browserLanguage;
+            if(lang.startsWith('en')) location.href = `${url}en/${hash}`;
+            else if(lang.startsWith('zh')) location.href = `${url}zh/${hash}`;
+            else location.href = `${url}en/${hash}`;
+        </script>
+    </head>
+</html>
